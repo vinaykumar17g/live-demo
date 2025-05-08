@@ -23,11 +23,11 @@ export const updatesatellite = async (req,res)=>
     let satelliteData = await satelliteModel.findById(satid)
     res.send(satelliteData);
 }
-    export const delatesatellite = async (req,res)=>
-    {
-        let satid=req.params.id;
-        let satelliteData = await satelliteModel.findById(satid)
-        await satelliteModel.deleteOne({_id:satid})
-        res.send(satelliteData);
-    }
+export const delatesatellite = async (req,res)=>
+{
+    let satid=req.params.id;
+    let satelliteData = await satelliteModel.findById(satid)
+    await satelliteModel.deleteOne({_id:satid})
+    res.send(satelliteData);
+}
 
