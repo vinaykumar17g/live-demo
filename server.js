@@ -7,8 +7,8 @@ const app =express();
 
 const port=5001;
 let jsonParser= bodyParser.json();
-// app.use(jsonParser);
-// app.use("/satellite",satelliteRouter);
+app.use(jsonParser);
+app.use("/satellite",satelliteRouter);
 app.get("/",(req,res)=>
 {
     res.send("hello")
@@ -18,5 +18,4 @@ app.listen(port,()=>
 {
     console.log(`server run on port ${port}`)
 })
-
-//dbConnect();
+dbConnect();
