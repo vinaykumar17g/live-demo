@@ -5,7 +5,7 @@ import { satelliteRouter } from './router/satellite.router.js';
 import bodyParser from 'body-parser';
 const app =express();
 
-const port=process.env.PORT;
+const port=80;
 let jsonParser= bodyParser.json();
 app.use(jsonParser);
 app.use("/satellite",satelliteRouter);
@@ -19,4 +19,4 @@ app.listen(port,()=>
     console.log(`server run on port ${port}`)
 })
 
-dbConnect();
+//dbConnect();
