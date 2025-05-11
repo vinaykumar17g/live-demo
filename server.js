@@ -11,7 +11,7 @@ app.use(jsonParser);
 app.use("/satellite",satelliteRouter);
 app.get("/",(req,res)=>
 {
-    res.send("hello")
+    res.send("check satellite on port 50001/satellite/getsatellite")
 })
 
 app.listen(port,()=>
