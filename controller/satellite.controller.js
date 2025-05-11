@@ -7,6 +7,20 @@ export const getSatellite =async(req,res)=>
     res.send(satelliteData);
 }
 
+export const getsatellitebyid=async (req, res)=>
+{
+    let satid = req.params.id;
+    let satelliteData = await satelliteModel.findById(satid);
+    res.send(satelliteData);
+}
+
+export const getsatellitebyname =async (req,res) =>
+{
+    let satname =req.params.name;
+    let satelliteData =await satelliteModel.findOne({satname});
+    res.send(satelliteData);
+}
+
 export const postsatellite = async (req,res)=>
 {
     let {satname,satlongitude,satlatitude,sataltitude}=req.body;
