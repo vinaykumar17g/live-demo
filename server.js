@@ -3,15 +3,17 @@ import 'dotenv/config'
 import { dbConnect } from './config/db.js';
 import { satelliteRouter } from './router/satellite.router.js';
 import bodyParser from 'body-parser';
+
 const app =express();
 
-const port=5001;
+const port=process.env.port;
 let jsonParser= bodyParser.json();
 app.use(jsonParser);
 app.use("/satellite",satelliteRouter);
+
 app.get("/",(req,res)=>
 {
-    res.send("check satellite on port 50001/satellite/getsatellite")
+    res.send("check satellite on port 50001/satellite/getsatellite");
 })
 
 app.listen(port,()=>
