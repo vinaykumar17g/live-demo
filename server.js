@@ -6,7 +6,7 @@ import bodyParser from 'body-parser';
 
 const app =express();
 
-const port=process.env.port;
+const port=process.env.PORT;
 let jsonParser= bodyParser.json();
 app.use(jsonParser);
 app.use("/satellite",satelliteRouter);
