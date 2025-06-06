@@ -4,7 +4,7 @@ import cors from 'cors';
 import { dbConnect } from './config/db.js';
 import { satelliteRouter } from './router/satellite.router.js';
 import bodyParser from 'body-parser';
-
+import { angleRouter } from './router/angle.router.js';
 const app =express();
 
 const port=process.env.PORT;
