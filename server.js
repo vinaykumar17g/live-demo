@@ -12,6 +12,7 @@ let jsonParser= bodyParser.json();
 app.use(jsonParser);
 app.use(cors())
 app.use("/satellite",satelliteRouter);
+app.use("/angle",angleRouter);
 
 app.get("/",(req,res)=>
 {
