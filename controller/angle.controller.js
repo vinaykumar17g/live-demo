@@ -1,7 +1,7 @@
 export let calculateLookUpAngle = async (req,res)=>
 {
     let {longitude,latitude,satlongitude,satlatitude,sataltitude}=req.body;
-    let result =CalculateLookUpAngle(longitude,latitude,satlatitude,satlongitude,sataltitude)
+    let result =CalculateLookUpAngle(latitude,longitude,satlatitude,satlongitude,sataltitude)
     res.send(result);
 }
 function CalculateLookUpAngle(latitude, longitude, satLat, satLong, satAltitude) {
