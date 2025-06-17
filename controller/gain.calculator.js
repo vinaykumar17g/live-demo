@@ -11,7 +11,6 @@ export let gainCalculator =async (req,res)=>
     
     let result =
     {
-        "wavelength":wavelength,
         "gain":gainInGHz
     }
     res.send(result);
