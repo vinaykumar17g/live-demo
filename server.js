@@ -21,7 +21,7 @@ app.use("/loss",lossRouter);
 app.use("/cnratio",cnratioRouter);
 app.get("/",(req,res)=>
 {
-    res.send("check satellite on port 50001/satellite/getsatellite");
+    res.send("check satellite on port 5001/satellite/getsatellite");
 })
 
 app.listen(port,()=>
