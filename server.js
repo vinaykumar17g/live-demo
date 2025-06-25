@@ -23,7 +23,6 @@ app.get("/",(req,res)=>
 {
     res.send("check satellite on port 5001/satellite/getsatellite");
 })
-
 app.listen(port,()=>
 {
     console.log(`server run on port ${port}`)
